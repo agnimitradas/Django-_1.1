@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <table class="table table-bordered table-hover table-responsive">
+            <h1 class="text-center"> Total Polls result</h1><br>
+           <tr class="table table-info">
+                <th>Choice</th>
+                <th>Total Votes</th>
+           </tr>
+
+            {% for question in votes %}
+                <tr>
+                    <td>{{question}}</td>
+                    <td>{{question.votes}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div class="col-md-3"></div>
+
+</div>
+</body>
+</html>
